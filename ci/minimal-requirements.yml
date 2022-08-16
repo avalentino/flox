@@ -8,7 +8,7 @@ dependencies:
   - pytest
   - pytest-cov
   - pytest-xdist
-  - numpy_groupies>=0.9.15
+  - numpy_groupies==0.9.19
   - pandas
   - pooch
   - toolz

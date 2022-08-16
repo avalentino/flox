@@ -9,12 +9,20 @@ def _get_aggregate(engine):
 
 
 def sum_of_squares(
-    group_idx, array, engine, *, axis=-1, func="sum", size=None, fill_value=None, dtype=None
+    group_idx,
+    array,
+    engine,
+    *,
+    axis=-1,
+    func="sumofsquares",
+    size=None,
+    fill_value=None,
+    dtype=None,
 ):
 
     return _get_aggregate(engine).aggregate(
         group_idx,
-        array**2,
+        array,
         axis=axis,
         func=func,
         size=size,
@@ -60,7 +68,7 @@ def nansum_of_squares(group_idx, array, engine, *, axis=-1, size=None, fill_valu
         group_idx,
         array,
         engine=engine,
-        func="nansum",
+        func="nansumofsquares",
         size=size,
         fill_value=fill_value,
         axis=axis,
