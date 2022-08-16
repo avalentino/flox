@@ -1,11 +1,10 @@
 from functools import partial
 
+import cupy as cp
+import cupyx
 import numpy as np
 
 from .xrutils import isnull
-
-import cupy as cp
-import cupyx
 
 cupy_array_type = (cp.ndarray,)
 
